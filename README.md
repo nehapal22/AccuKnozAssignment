@@ -1,6 +1,7 @@
 # AccuKnozAssignment
 ### Topic: Django Signals
 Q1) By default are django signals executed synchronously or asynchronously?
+
 ANS) By default, Django signals run synchronously. When a signal is emitted, associated handlers (receivers) are run right away in the same process and thread as the caller.
 Description of how the code works:
 When User.objects.create() is invoked, Django stores the new User object in the database.
@@ -16,6 +17,7 @@ User created.
 The signal handler runs synchronously, so the print("User created.") statement waits until the signal processing is complete.
 
 Q2)Do django signals run in the same thread as the caller?
+
 ANS)Yes, Django signals execute in the same thread as the caller by default. Signal handlers are run in the same thread that is sending the signal.
 How It Works
 The - print(f"Main thread: {threading.current_thread().name}") - line executes in the main thread and prints something like:
@@ -30,6 +32,7 @@ Output:
 Signal running in thread: MainThread
 
 Q3)By default do django signals run in the same database transaction as the caller?
+
 ANS) By default, Django signals run in the same database transaction as the caller. If the caller is inside a transaction, the signal handlers will also execute within that transaction.
 How the code works:
 transaction.atomic() guarantees the block within it executes as an atomic transaction. In case something goes wrong, all operations within this block get rolled back.
