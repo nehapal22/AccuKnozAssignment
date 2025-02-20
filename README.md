@@ -1,5 +1,5 @@
 # AccuKnozAssignment
-##Topic: Django Signals
+### Topic: Django Signals
 Q1) By default are django signals executed synchronously or asynchronously?
 ANS) By default, Django signals run synchronously. When a signal is emitted, associated handlers (receivers) are run right away in the same process and thread as the caller.
 Description of how the code works:
@@ -41,7 +41,7 @@ Expected Output:
 Inside transaction: True
 Signal received inside transaction: True
 
-##Topic: Custom Classes in Python
+### Topic: Custom Classes in Python
 
 To design a Rectangle class that satisfies the requirements, we must make sure the following is accomplished:
 1. The class must be initialized with length and width as int attributes.
