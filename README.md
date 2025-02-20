@@ -10,10 +10,11 @@ The handler prints "Signal received.", delays by 5 seconds, and then prints "Sig
 Lastly, the print("User is created.") instruction is run.
 
 When you run this code, the output will look like this:
+```bash
 Signal received.
 Signal processing complete.
 User created.
-
+```
 The signal handler runs synchronously, so the print("User created.") statement waits until the signal processing is complete.
 
 Q2)Do django signals run in the same thread as the caller?
